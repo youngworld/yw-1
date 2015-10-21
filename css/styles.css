@@ -1,7 +1,9 @@
 
 body, html {
-  height: 100%;
-  width: 100%;
+ width: 100%;
+ margin-bottom: 0;
+
+ background: white;
 }
 
 #nav-wrapper {
@@ -25,14 +27,15 @@ body, html {
   -webkit-flex-flow: row wrap;
   justify-content: center;
   width: 100%;
-  margin-bottom: 15%;
+  margin-bottom: 0;
+
 }
 
 .work-wrapper {
   display: block;
   margin: 0 auto;
   width: 100%;
-  margin-bottom: 20%;
+  margin-bottom: 10%;
 }
 
 
@@ -55,6 +58,8 @@ body, html {
   width: 100%;
   max-height: 780px;
   height: auto;
+  background: url('../images/foliage-poster.png') center no-repeat;
+
 }
 
 video {
@@ -63,40 +68,12 @@ video {
   height: 100%;
 }
 
-#sound-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  justify-content: center; 
-  width: 100%;
-  margin: 4em auto;
-
-}
-
-#music {
-  display: inline-block;
-  padding-left: 2em;
-
-
-}
-
-#nat {
-  display: inline-block;
-  padding-left: 4em;
-}
-
-#voice {
-  display: inline-block;
-  padding-left: 2em;
-}
+#poster {display: none;}
 
 .quote-container {
   display: block;
-
-  margin-top: 8%;
+  width: 100%;
+  margin: 5% auto 10%;
 }
 
 
@@ -105,27 +82,49 @@ video {
   width: 66%;
   max-width: 750px;
   height: auto;
-  margin-top: 10%;
+  margin: 10% auto 0;
+}
+
+#contact-wrap {
+  min-height: 87vh;
+  margin-bottom: 100px;
 }
 
 #contact {
   display: block;
   width: 66%;
-  max-width: 720px;
   height: auto;
-  margin-top: 10%;
-  margin-bottom: 10px;
+  max-width: 720px;
+  margin: 10% auto 0;
+}
+
+
+.iframe-wrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 20%;
 
 }
 
-#valeria {
+.h-iframe {
+  position: relative;
+}
+
+.h-iframe .ratio {
   display: block;
-  width: 740px;
-  margin: 100px auto 0px;
-
-
+  width: 100%;
+  height: auto;
 }
 
+.h-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+}
 
 .section {
   display: block;
@@ -162,9 +161,7 @@ video {
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
-  min-width: 300px;
-  max-width: 600px;
+  width: 600px;
   height: 80px;
   background: #ddd;
   margin-bottom: 10px;
@@ -183,10 +180,9 @@ video {
   -webkit-flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
-  min-width: 300px;
+  width: 600px;
+  /*min-width: 300px;*/
   max-width: 600px;
-  display: block;
   height: auto;
   margin-bottom: 10px;
   padding-top: 4px;
@@ -212,23 +208,7 @@ video {
   margin-right: auto;
 }
 
-footer {
-  display: block;
-  width: 100%;
-  height: 3em;
-  background-color: black;
-  color: gray;
-  font-family: Good OT;
-  font-weight: 100;
-  font-size: .8em;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin: 0 auto;
-  padding-top: 30px;
-  text-align: center;
 
-
-}
 
 img.social {
   margin: 0 10px;
@@ -240,8 +220,8 @@ img.social {
 h1 {
   display: block;
   width: 100%;
-  font-family: Iowan Old Style;
-  font-weight: 100;
+  font-family: 'Iowan Old Style', serif;
+  font-weight: 400;
   font-size: 2em;
   text-align: center;
   line-height: 1.6;
@@ -252,7 +232,7 @@ h1 {
 h1.contact {
   display: block;
   width: 100%;
-  font-family: Iowan Old Style;
+  font-family: 'Iowan Old Style', serif;
   font-weight: 100;
   font-size: 2em;
   text-align: center;
@@ -264,45 +244,49 @@ h1.contact {
 
 
 p {
-  font-family: Iowan Old Style;
+  font-family: 'Iowan Old Style', serif;
   font-size: 1.4em;
   text-align: left;
   line-height: 2;
   color: #bbb;
 }
 
-p.sounds {
-  font-family: Good OT;
-  font-weight: 100;
-  font-size: 1.4em;
-
-  margin-right: 2em;
-
-  color: #ddd;
-}
 
 p.quote {
   color: #ccc;
+  width: 50%;
+  max-width: 720px;
+  font-size: 1.8em;
+  font-style: italic;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 p.signature {
   color: #bbb;
+  width: 50%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   text-transform: uppercase;
-  font-style: italic;
-  float: right;
+
+  
 }
 
 p.work-title {
-  font-family: Good OT;
-  font-weight: 100;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 200;
+   text-transform: uppercase;
   font-size: 1.2em;
   padding-left: 30px;
   color: white;
 }
 
 p.work-role {
-  font-family: Good OT;
-  font-weight: 100;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
   font-size: 1.2em;
   text-transform: uppercase;
   font-style: italic;
@@ -310,6 +294,14 @@ p.work-role {
   padding-right: 30px;
   text-decoration: none;
   color: white;
+}
+
+p.date {
+  color: #bbb;
+  float: right;
+  font-style: italic;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 p.dev-description1, p.dev-description2, p.dev-description3, p.dev-description4 {
@@ -323,14 +315,13 @@ p.dev-description1, p.dev-description2, p.dev-description3, p.dev-description4 {
 img[alt="medium"] {
   display: inline;
   padding-left: 5px;
-
 }
 
 
 a.nav {
-  font-family: Good OT;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 100;
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-style: italic;
   text-decoration: none;
   text-transform: uppercase;
@@ -367,6 +358,22 @@ a.writing:hover {
   text-decoration: none;
   }
 
+
+footer {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background-color: #ddd;
+  color: #aaa;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 100;
+  font-size: .8em;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-align: center;
+}
 
 /****************** SOCIAL BUTTON HOVER STATES *******************/
 
@@ -429,7 +436,7 @@ a img.social:hover {
 
 #dev2:hover {
   background: #f5c356;
-  transition: .1s ease-in-out 0s; 
+  transition: .1s ease-in-out 0s;
 }
 
 #dev3:hover {
@@ -443,9 +450,106 @@ a img.social:hover {
 }
 
 
-/******************* MEDIA QUERIES *********************/ 
+
+/************************ MEDIA QUERIES *************************/ 
 
 
 
+@media all and (max-width: 1167px) {
+  p.work-role {font-size: 1em;}
+  p.work-title {font-size: 1em;}
+}
+
+@media all and (max-width: 970px) {
+  .work-container {width: 600px; height: 100px;}
+  .writing-container {width: 100%;}
+  p.work-role {display: none;}
+  p.date {font-size: 1.2em;}
+}
+
+@media all and (max-width: 900px) {
+  a.nav {font-size: 1.75em;}
+  h1 {font-size: 1.75em;}
+}
 
 
+@media all and (max-width: 700px) {
+
+  a.nav {display: block; 
+    width: 50%; 
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    margin-bottom: 3px;
+    }
+
+  #home-nav {background: #e1898a;}
+  #about-nav {background: #e59b9c;}
+  #works-nav { background: #ebb0b1;}
+  #contact-nav { background: #f0c2c2;}  
+  
+  h1 {margin-bottom: 40px; font-size: 1.4em;}
+  h1.contact {font-size: 1.3em; margin: 20px auto}
+
+  #nav-wrapper {display: block;}
+  .main {height: 300px; text-align: center;}
+  .section {margin-top: 80px;}
+
+  p {font-size: 1.2em;}
+  p.date {font-size: 1em;}
+  p.work-title {font-size: .9em; font-weight: 300;}
+
+  img[alt="medium"] {width: 35px;}
+  a img.social {width: 65px;}
+
+  #contact-wrap {margin-bottom: 40px;}
+  .work-container {width: 80%; }
+  .dev-container {width: 80%; height: 55px;}
+  .dev-container-open {height: auto;}
+  .work-container {height: 90px;}
+  .writing-container {width: 75%;}
+ }
+
+}
+
+
+@media all and (max-width: 630px) {
+
+  a.nav {display: block; 
+    width: 50%; 
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 3px;
+    }
+
+  .main {width: 75%; height: 520px; padding-top:40px; padding-bottom: 30px; text-align: center; margin: 0 auto;}
+  
+  .main h1 {margin-bottom: 20px; font-size: 26px; line-height: 1.8;}
+  p.date {display: none;}
+  p {font-size: 1.1em;}
+  p.writing {font-size: 1.22em;}
+  p.dev-description1 {font-size: 1em;}
+  p.dev-description2 {font-size: 1em;}
+  p.dev-description3 {font-size: 1em;}
+  p.dev-description4 {font-size: 1em;}
+  
+  img[alt="medium"] {width: 24px;}
+  
+  .writing-container {height: 40px;}
+  #about {width: 75%; margin-bottom: 20px;}
+  #contact {width: 75%; margin-bottom: 20px;}
+  #twitter {margin-left: 30px;}
+
+  .video-container {background: url('../images/foliage-poster.png') center center / cover no-repeat;}
+  video {display: none;}
+  #poster {display: block; width: 100%;}
+
+}
