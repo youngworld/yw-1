@@ -2,7 +2,8 @@
 body, html {
  width: 100%;
  margin-bottom: 0;
-
+margin-left: 0;
+padding-left: 0;
  background: white;
 }
 
@@ -28,6 +29,7 @@ body, html {
   justify-content: center;
   width: 100%;
   margin-bottom: 0;
+  margin-left: 0;
 
 }
 
@@ -476,7 +478,7 @@ a img.social:hover {
 @media all and (max-width: 700px) {
 
   a.nav {display: block; 
-    width: 50%; 
+    width: 90%; 
     font-size: 1.5em;
     font-weight: 400;
     margin-left: auto; 
@@ -495,7 +497,7 @@ a img.social:hover {
   h1 {margin-bottom: 40px; font-size: 1.4em;}
   h1.contact {font-size: 1.3em; margin: 20px auto}
 
-  #nav-wrapper {display: block;}
+  #nav-wrapper {display: block; margin-top: 0;}
   .main {height: 300px; text-align: center;}
   .section {margin-top: 80px;}
 
@@ -514,13 +516,18 @@ a img.social:hover {
   .writing-container {width: 75%;}
  }
 
-}
 
 
 @media all and (max-width: 630px) {
+  
+  video {display: none;}
+  .video-container {background: url('../images/foliage-poster.png') center center / cover no-repeat;}
 
+  #poster {display: block; width: 100%;}
+
+  #nav-wrapper {width: 100%;}
   a.nav {display: block; 
-    width: 50%; 
+    width: 90%; 
     font-size: 1.5em;
     font-weight: 400;
     margin-left: auto; 
@@ -530,7 +537,7 @@ a img.social:hover {
     margin-bottom: 3px;
     }
 
-  .main {width: 75%; height: 520px; padding-top:40px; padding-bottom: 30px; text-align: center; margin: 0 auto;}
+  .main {width: 75%; height: 50%; padding-top:40px; padding-bottom: 30px; text-align: center; margin: 0 auto;}
   
   .main h1 {margin-bottom: 20px; font-size: 26px; line-height: 1.8;}
   p.date {display: none;}
@@ -541,6 +548,7 @@ a img.social:hover {
   p.dev-description3 {font-size: 1em;}
   p.dev-description4 {font-size: 1em;}
   
+
   img[alt="medium"] {width: 24px;}
   
   .writing-container {height: 40px;}
@@ -548,8 +556,6 @@ a img.social:hover {
   #contact {width: 75%; margin-bottom: 20px;}
   #twitter {margin-left: 30px;}
 
-  .video-container {background: url('../images/foliage-poster.png') center center / cover no-repeat;}
-  video {display: none;}
-  #poster {display: block; width: 100%;}
+
 
 }
